@@ -1,1 +1,1 @@
-Do not click the button
+Do not click the generate button
