@@ -6,13 +6,13 @@ const RandMessageGen = (arr) => {
 
     for (let i = 0; i < arr.length; i++) {
         var max = arr.length;
-        SignOffArr[i] = Math.floor(Math.random() * max);
+        var randomIndx = Math.floor(Math.random() * max);
+        return arr[randomIndx];
     } 
-    return SignOffArr;
 };
 
-const GenerateBtn = document.querySelector('GenerateBtn');
-    GenerateBtn.addEventListener("click", (MouseEvent) => {
-        document.getElementById('#GeneratorOutput').innerHTML = RandMessageGen;
+const GenerateBtn = document.querySelector('#GenerateBtn');
+    GenerateBtn.addEventListener("click", () => {
+        document.getElementById('GeneratorOutput').innerHTML = RandMessageGen(SignOffArr);
     });
 
